@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+set(LIB_PROJECT_NAME types)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -15,15 +16,19 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   
 endif()
 
-add_library(types INTERFACE)
-target_include_directories(types INTERFACE include)
+if(NOT ${LIB_PROJECT_NAME})
+  add_library(${LIB_PROJECT_NAME} INTERFACE)
+  target_include_directories(${LIB_PROJECT_NAME} INTERFACE include)
+  add_library(sb::${LIB_PROJECT_NAME} ALIAS ${LIB_PROJECT_NAME})
+endif()
 
-add_library(sb::types ALIAS types)
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+  add_subdirectory(external)
 
-if(BUILD_EXAMPLES STREQUAL "yes")
-  if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+  if(BUILD_EXAMPLES STREQUAL "yes")
     add_subdirectory(examples)
   endif()
+
 endif()
 
 if(FRAMEWORK STREQUAL "gtest")
