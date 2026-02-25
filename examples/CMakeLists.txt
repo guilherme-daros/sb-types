@@ -1,0 +1,4 @@
+add_subdirectory(EnumStrApp)
+add_subdirectory(SingletonApp)
+add_subdirectory(StringLiteralApp)
+add_subdirectory(TypenameApp)

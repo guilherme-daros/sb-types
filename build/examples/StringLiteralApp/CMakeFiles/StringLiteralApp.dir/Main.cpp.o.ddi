@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "examples/StringLiteralApp/CMakeFiles/StringLiteralApp.dir/Main.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/geagaa/workspace/playground/antimony-types/build/cmake_install.cmake",
+		"/home/geagaa/workspace/playground/antimony-types/build/examples/cmake_install.cmake",
+		"/home/geagaa/workspace/playground/antimony-types/build/examples/EnumStrApp/cmake_install.cmake",
+		"/home/geagaa/workspace/playground/antimony-types/build/examples/SingletonApp/cmake_install.cmake",
+		"/home/geagaa/workspace/playground/antimony-types/build/examples/StringLiteralApp/cmake_install.cmake",
+		"/home/geagaa/workspace/playground/antimony-types/build/examples/TypenameApp/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
